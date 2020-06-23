@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<DAL_BanVeXe.TUYENDI>
+<div class="site-section">
+    <div class="container">
+        <div class="block-heading-1">
+            <h2 style="text-align:center">TUYẾN ĐI  </h2>
+        </div>
+        <table style="width:100%; border:1px; text-align:center;">
+            <thead style="background:rgba(21,135,76,.59);color:white;">
+                <tr>
+                    <th>STT</th>
+                    <th>Nơi đi</th>
+                    <th>Nơi đến</th>
+                    <th>Loại xe</th>
+                    <th>Quãng đường</th>
+                    <th>Thời Gian</th>
+                    <th>Giá vé</th>
+                    <th>&emsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewData["tuyendi"] as List<DAL_BanVeXe.TUYENDI>)
+                {
+                <tr>
+                    <td></td>
+                    <td>@item.ID_NOIDI</td>
+                    <td>@item.ID_NOIDEN</td>
+                    <td>@item.ID_LOAIXE</td>
+                    <td>@item.KHOANGCACH</td>
+                    <td>@item.SOGIOCHAY</td>
+                    <td>@item.DONGIA</td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
